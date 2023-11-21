@@ -1,0 +1,92 @@
+Original literal count: 296
+Added gate: st_0
+Input list: 2 6 4 12 8 10 
+b_ d_ + b_ c_ g_ + b_ e_ g_ + b_ f_ g_ + c_ d_ e_ g_ + d_ e_ f_ g_ 
+Return: 14
+------------
+Added gate: st_1
+Input list: 6 4 12 8 10 
+d_ + c_ g_ + e_ g_ + f_ g_ 
+Return: 16
+------------
+Added gate: st_2
+Input list: 4 8 10 
+c_ + e_ + f_ 
+Return: 18
+------------
+Added gate: st_3
+Input list: 0 6 8 12 4 10 
+a_ d e_ + a d_ g + a_ d g_ + c_ d g_ + d f_ g_ + a_ c_ d f_ + c d_ e g + d_ e f g + a c d_ e f 
+Return: 20
+------------
+Added gate: st_4
+Input list: 0 8 12 4 10 
+a_ e_ + a_ g_ + c_ g_ + f_ g_ + a_ c_ f_ 
+Return: 22
+------------
+Added gate: st_5
+Input list: 8 12 4 10 
+e_ + g_ + c_ f_ 
+Return: 24
+------------
+Added gate: st_6
+Input list: 0 2 4 12 8 10 
+a_ + b_ c_ g_ + b_ e_ g_ + b_ f_ g_ 
+Return: 26
+------------
+Added gate: st_7
+Input list: 2 12 
+b_ g_ 
+Return: 28
+------------
+Added gate: st_8
+Input list: 4 8 10 
+c_ + e_ + f_ 
+Return: 30
+------------
+Added gate: st_9
+Input list: 4 10 8 
+c f + c_ f_ + e_ f_ 
+Return: 32
+------------
+Added gate: st_10
+Input list: 4 8 
+c_ + e_ 
+Return: 34
+------------
+Added gate: st_11
+Input list: 4 10 
+c_ + f 
+Return: 36
+------------
+Added gate: st_12
+Input list: 2 8 12 4 10 
+b e g + c e g + b f g + e f g + b_ c_ g_ + b_ e_ g_ + c_ e_ g_ + b_ f_ g_ + e_ f_ g_ 
+Return: 38
+------------
+Added gate: st_13
+Input list: 2 4 8 10 
+b_ c_ + b_ e_ + c_ e_ + b_ f_ + e_ f_ 
+Return: 40
+------------
+Added gate: st_14
+Input list: 4 8 10 
+c_ + e_ + f_ 
+Return: 42
+------------
+Added gate: st_15
+Input list: 8 10 4 12 
+e_ f_ + c e f + c e g + e f g + c_ e_ g_ 
+Return: 44
+------------
+Added gate: st_16
+Input list: 4 10 12 
+c f + c g + f g 
+Return: 46
+------------
+Added gate: st_17
+Input list: 10 12 
+f + g 
+Return: 48
+------------
+Optimized literal count: 179

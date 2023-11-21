@@ -1,0 +1,642 @@
+Original literal count: 2584
+Added gate: st_0
+Input list: 28 122 90 96 114 126 132 168 58 148 
+o_ j1 + t0_ j1 + w0 j1 + f1_ j1 + j1 l1 + j1 o1_ g2_ + o d0 t0 w0_ f1 l1_ o1 w1 + o d0_ t0 w0_ f1 l1_ o1 w1_ + o d0 t0 w0_ f1 l1_ w1 g2 + o d0_ t0 w0_ f1 l1_ w1_ g2 
+Return: 188
+------------
+Added gate: st_1
+Input list: 28 90 96 114 126 132 168 
+o_ + t0_ + w0 + f1_ + l1 + o1_ g2_ 
+Return: 190
+------------
+Added gate: st_2
+Input list: 28 76 90 96 114 126 132 138 
+o_ m0 + m0 t0 + m0 w0_ + m0 f1 + m0 l1 + m0 o1 + m0 r1 + o t0_ w0 f1_ l1_ o1_ r1 
+Return: 192
+------------
+Added gate: st_3
+Input list: 28 90 96 114 126 132 138 
+o_ + t0 + w0_ + f1 + l1 + o1 + r1 
+Return: 194
+------------
+Added gate: st_4
+Input list: 70 98 104 156 124 146 
+j0_ x0 a1_ + j0 x0_ a2 + j0 x0_ k1 v1_ + j0 x0 k1_ a2_ + x0 a1_ k1_ a2_ + j0 x0 v1 a2_ + x0 a1_ v1 a2_ 
+Return: 196
+------------
+Added gate: st_5
+Input list: 70 104 124 156 146 
+j0_ a1_ + j0 k1_ a2_ + a1_ k1_ a2_ + j0 v1 a2_ + a1_ v1 a2_ 
+Return: 198
+------------
+Added gate: st_6
+Input list: 70 124 156 146 
+j0_ + k1_ a2_ + v1 a2_ 
+Return: 200
+------------
+Added gate: st_7
+Input list: 124 146 
+k1_ + v1 
+Return: 202
+------------
+Added gate: st_8
+Input list: 70 156 124 146 
+j0_ a2 + j0_ k1 v1_ + j0 k1_ a2_ + j0 v1 a2_ 
+Return: 204
+------------
+Added gate: st_9
+Input list: 156 124 146 
+a2 + k1 v1_ 
+Return: 206
+------------
+Added gate: st_10
+Input list: 54 88 142 70 98 104 154 162 
+b0_ s0 + s0 t1_ + b0_ j0_ x0 a1 z1_ d2_ + j0_ x0 a1 t1_ z1_ d2_ 
+Return: 208
+------------
+Added gate: st_11
+Input list: 88 70 98 104 154 162 
+s0 + j0_ x0 a1 z1_ d2_ 
+Return: 210
+------------
+Added gate: st_12
+Input list: 28 90 34 70 98 104 
+o t0_ + r t0_ + o_ r_ j0 t0 + o_ r_ t0 x0_ + j0_ t0_ x0 a1 + o_ r_ t0 a1_ 
+Return: 212
+------------
+Added gate: st_13
+Input list: 28 34 70 98 104 
+o + r + j0_ x0 a1 
+Return: 214
+------------
+Added gate: st_14
+Input list: 98 104 70 156 124 146 
+x0_ a1 + j0 x0 a1_ a2 + j0 x0 a1_ k1 v1_ + j0 x0 a1 k1_ a2_ + j0 x0 a1 v1 a2_ 
+Return: 216
+------------
+Added gate: st_15
+Input list: 70 98 
+j0 x0 
+Return: 218
+------------
+Added gate: st_16
+Input list: 104 156 124 146 
+a1_ a2 + a1_ k1 v1_ + a1 k1_ a2_ + a1 v1 a2_ 
+Return: 220
+------------
+Added gate: st_17
+Input list: 156 124 146 
+a2 + k1 v1_ 
+Return: 222
+------------
+Added gate: st_18
+Input list: 28 54 106 88 94 142 102 168 58 154 162 
+o_ b0_ b1 + o_ s0_ b1 + b0_ v0 b1 + s0_ v0 b1 + o_ b1 t1_ + v0 b1 t1_ + o b0_ v0_ z0_ + o s0_ v0_ z0_ + o v0_ z0_ t1_ + b0 s0 t1 g2 + o_ d0 b1 z1_ d2_ + d0 v0 b1 z1_ d2_ + o d0 v0_ z0_ z1_ d2_ 
+Return: 224
+------------
+Added gate: st_19
+Input list: 28 106 94 102 
+o_ b1 + v0 b1 + o v0_ z0_ 
+Return: 226
+------------
+Added gate: st_20
+Input list: 54 88 142 58 154 162 
+b0_ + s0_ + t1_ + d0 z1_ d2_ 
+Return: 228
+------------
+Added gate: st_21
+Input list: 28 54 74 88 94 142 80 22 58 154 162 168 
+o_ b0_ l0 + o_ l0 s0_ + b0_ l0 v0 + l0 s0_ v0 + o_ l0 t1_ + l0 v0 t1_ + o b0_ o0 v0_ + o o0 s0_ v0_ + o o0 v0_ t1_ + l b0 d0_ s0 t1 + l b0 s0 t1 z1 + l b0 s0 t1 d2 + l b0 s0 t1 g2 + o_ d0 l0 z1_ d2_ g2_ + d0 l0 v0 z1_ d2_ g2_ + o d0 o0 v0_ z1_ d2_ g2_ 
+Return: 230
+------------
+Added gate: st_22
+Input list: 28 74 94 80 
+o_ l0 + l0 v0 + o o0 v0_ 
+Return: 232
+------------
+Added gate: st_23
+Input list: 54 88 142 58 154 162 168 
+b0_ + s0_ + t1_ + d0 z1_ d2_ g2_ 
+Return: 234
+------------
+Added gate: st_24
+Input list: 28 66 90 96 114 120 126 132 
+o_ h0 + h0 t0 + h0 w0_ + h0 f1 + h0 i1 + h0 l1 + h0 o1 + o t0_ w0 f1_ i1 l1_ o1_ 
+Return: 236
+------------
+Added gate: st_25
+Input list: 28 90 96 114 120 126 132 
+o_ + t0 + w0_ + f1 + i1 + l1 + o1 
+Return: 238
+------------
+Added gate: st_26
+Input list: 54 142 
+b0_ + t1_ 
+Return: 240
+------------
+Added gate: st_27
+Input list: 28 60 90 96 114 126 128 132 
+o_ e0 + e0 t0 + e0 w0_ + e0 f1 + e0 l1 + e0 m1 + e0 o1 + o t0_ w0 f1_ l1_ m1 o1_ 
+Return: 242
+------------
+Added gate: st_28
+Input list: 28 90 96 114 126 128 132 
+o_ + t0 + w0_ + f1 + l1 + m1 + o1 
+Return: 244
+------------
+Added gate: st_29
+Input list: 28 54 62 88 94 142 36 58 154 162 168 
+o_ b0_ f0 + o_ f0 s0_ + b0_ f0 v0 + f0 s0_ v0 + o_ f0 t1_ + f0 v0 t1_ + s b0 d0_ s0 t1 + s b0 s0 t1 z1 + s b0 s0 t1 d2 + s b0 s0 t1 g2 + o_ d0 f0 z1_ d2_ g2_ + d0 f0 v0 z1_ d2_ g2_ 
+Return: 246
+------------
+Added gate: st_30
+Input list: 28 54 88 94 142 58 154 162 168 
+o_ b0_ + o_ s0_ + b0_ v0 + s0_ v0 + o_ t1_ + v0 t1_ + o_ d0 z1_ d2_ g2_ + d0 v0 z1_ d2_ g2_ 
+Return: 248
+------------
+Added gate: st_31
+Input list: 54 88 142 58 154 162 168 
+b0_ + s0_ + t1_ + d0 z1_ d2_ g2_ 
+Return: 250
+------------
+Added gate: st_32
+Input list: 28 54 80 88 94 142 62 26 58 154 162 168 
+o_ b0_ o0 + o_ o0 s0_ + b0_ o0 v0 + o0 s0_ v0 + o_ o0 t1_ + o0 v0 t1_ + o b0_ f0 v0_ + o f0 s0_ v0_ + o f0 v0_ t1_ + n b0 d0_ s0 t1 + n b0 s0 t1 z1 + n b0 s0 t1 d2 + n b0 s0 t1 g2 + o_ d0 o0 z1_ d2_ g2_ + d0 o0 v0 z1_ d2_ g2_ + o d0 f0 v0_ z1_ d2_ g2_ 
+Return: 252
+------------
+Added gate: st_33
+Input list: 28 80 94 62 
+o_ o0 + o0 v0 + o f0 v0_ 
+Return: 254
+------------
+Added gate: st_34
+Input list: 54 88 142 58 154 162 168 
+b0_ + s0_ + t1_ + d0 z1_ d2_ g2_ 
+Return: 256
+------------
+Added gate: st_35
+Input list: 28 82 90 96 114 126 132 136 
+o_ p0 + p0 t0 + p0 w0_ + p0 f1 + p0 l1 + p0 o1 + p0 q1 + o t0_ w0 f1_ l1_ o1_ q1 
+Return: 258
+------------
+Added gate: st_36
+Input list: 28 90 96 114 126 132 136 
+o_ + t0 + w0_ + f1 + l1 + o1 + q1 
+Return: 260
+------------
+Added gate: st_37
+Input list: 84 44 142 54 88 58 154 162 168 
+q0 + w t1 + b0 s0_ t1 + b0 d0 t1 z1_ d2_ g2_ 
+Return: 262
+------------
+Added gate: st_38
+Input list: 44 54 88 58 154 162 168 
+w + b0 s0_ + b0 d0 z1_ d2_ g2_ 
+Return: 264
+------------
+Added gate: st_39
+Input list: 88 58 154 162 168 
+s0_ + d0 z1_ d2_ g2_ 
+Return: 266
+------------
+Added gate: st_40
+Input list: 28 54 130 88 94 142 144 58 184 154 162 168 
+o_ b0_ n1 + o_ s0_ n1 + b0_ v0 n1 + s0_ v0 n1 + o_ n1 t1_ + v0 n1 t1_ + o b0_ v0_ u1 + o s0_ v0_ u1 + o v0_ t1_ u1 + b0 d0_ s0 t1 o2 + b0 s0 t1 z1 o2 + b0 s0 t1 d2 o2 + b0 s0 t1 g2 o2 + o_ d0 n1 z1_ d2_ g2_ + d0 v0 n1 z1_ d2_ g2_ + o d0 v0_ u1 z1_ d2_ g2_ 
+Return: 268
+------------
+Added gate: st_41
+Input list: 28 130 94 144 
+o_ n1 + v0 n1 + o v0_ u1 
+Return: 270
+------------
+Added gate: st_42
+Input list: 54 88 142 58 154 162 168 
+b0_ + s0_ + t1_ + d0 z1_ d2_ g2_ 
+Return: 272
+------------
+Added gate: st_43
+Input list: 92 148 122 
+u0_ w1 + j1_ w1 + u0 j1 w1_ 
+Return: 274
+------------
+Added gate: st_44
+Input list: 92 122 
+u0_ + j1_ 
+Return: 276
+------------
+Added gate: st_45
+Input list: 20 28 94 106 
+k o_ + k v0 + k b1 + o v0_ b1 
+Return: 278
+------------
+Added gate: st_46
+Input list: 28 94 106 
+o_ + v0 + b1 
+Return: 280
+------------
+Added gate: st_47
+Input list: 28 54 144 88 94 142 140 58 186 154 162 168 
+o_ b0_ u1 + o_ s0_ u1 + b0_ v0 u1 + s0_ v0 u1 + o_ t1_ u1 + v0 t1_ u1 + o b0_ v0_ s1 + o s0_ v0_ s1 + o v0_ s1 t1_ + b0 d0_ s0 t1 p2 + b0 s0 t1 z1 p2 + b0 s0 t1 d2 p2 + b0 s0 t1 g2 p2 + o_ d0 u1 z1_ d2_ g2_ + d0 v0 u1 z1_ d2_ g2_ + o d0 v0_ s1 z1_ d2_ g2_ 
+Return: 282
+------------
+Added gate: st_48
+Input list: 28 144 94 140 
+o_ u1 + v0 u1 + o v0_ s1 
+Return: 284
+------------
+Added gate: st_49
+Input list: 54 88 142 58 154 162 168 
+b0_ + s0_ + t1_ + d0 z1_ d2_ g2_ 
+Return: 286
+------------
+Added gate: st_50
+Input list: 28 54 140 88 94 142 158 4 58 154 162 168 
+o_ b0_ s1 + o_ s0_ s1 + b0_ v0 s1 + s0_ v0 s1 + o_ s1 t1_ + v0 s1 t1_ + o b0_ v0_ b2 + o s0_ v0_ b2 + o v0_ t1_ b2 + c b0 d0_ s0 t1 + c b0 s0 t1 z1 + c b0 s0 t1 d2 + c b0 s0 t1 g2 + o_ d0 s1 z1_ d2_ g2_ + d0 v0 s1 z1_ d2_ g2_ + o d0 v0_ z1_ b2 d2_ g2_ 
+Return: 288
+------------
+Added gate: st_51
+Input list: 28 140 94 158 
+o_ s1 + v0 s1 + o v0_ b2 
+Return: 290
+------------
+Added gate: st_52
+Input list: 54 88 142 58 154 162 168 
+b0_ + s0_ + t1_ + d0 z1_ d2_ g2_ 
+Return: 292
+------------
+Added gate: st_53
+Input list: 44 54 142 28 90 96 114 126 132 168 
+w_ b0_ t1 + o b0_ t0 w0_ f1 l1_ o1 + o t0 w0_ f1 l1_ o1 t1_ + o b0_ t0 w0_ f1 l1_ g2 + o t0 w0_ f1 l1_ t1_ g2 
+Return: 294
+------------
+Added gate: st_54
+Input list: 44 142 28 90 96 114 126 132 168 
+w_ t1 + o t0 w0_ f1 l1_ o1 + o t0 w0_ f1 l1_ g2 
+Return: 296
+------------
+Added gate: st_55
+Input list: 28 90 96 114 126 
+o t0 w0_ f1 l1_ 
+Return: 298
+------------
+Added gate: st_56
+Input list: 132 168 
+o1 + g2 
+Return: 300
+------------
+Added gate: st_57
+Input list: 124 146 70 156 98 104 
+k1 v1_ + j0 a2 + x0_ a2 + a1_ a2 
+Return: 302
+------------
+Added gate: st_58
+Input list: 70 98 104 
+j0 + x0_ + a1_ 
+Return: 304
+------------
+Added gate: st_59
+Input list: 28 54 158 88 94 142 152 10 58 154 162 168 
+o_ b0_ b2 + o_ s0_ b2 + b0_ v0 b2 + s0_ v0 b2 + o_ t1_ b2 + v0 t1_ b2 + o b0_ v0_ y1 + o s0_ v0_ y1 + o v0_ t1_ y1 + f b0 d0_ s0 t1 + f b0 s0 t1 z1 + f b0 s0 t1 d2 + f b0 s0 t1 g2 + o_ d0 z1_ b2 d2_ g2_ + d0 v0 z1_ b2 d2_ g2_ + o d0 v0_ y1 z1_ d2_ g2_ 
+Return: 306
+------------
+Added gate: st_60
+Input list: 28 158 94 152 
+o_ b2 + v0 b2 + o v0_ y1 
+Return: 308
+------------
+Added gate: st_61
+Input list: 54 88 142 58 154 162 168 
+b0_ + s0_ + t1_ + d0 z1_ d2_ g2_ 
+Return: 310
+------------
+Added gate: st_62
+Input list: 54 88 142 
+b0 s0 t1 
+Return: 312
+------------
+Added gate: st_63
+Input list: 58 154 162 168 
+d0_ + z1 + d2 + g2 
+Return: 314
+------------
+Added gate: st_64
+Input list: 90 126 96 28 34 70 98 104 
+t0_ l1 + w0_ l1 + o_ r_ j0 l1 + o_ r_ x0_ l1 + o_ r_ a1_ l1 + o t0 w0 l1_ + r t0 w0 l1_ + j0_ t0 w0 x0 a1 l1_ 
+Return: 316
+------------
+Added gate: st_65
+Input list: 90 96 28 34 70 98 104 
+t0_ + w0_ + o_ r_ j0 + o_ r_ x0_ + o_ r_ a1_ 
+Return: 318
+------------
+Added gate: st_66
+Input list: 28 34 
+o_ r_ 
+Return: 320
+------------
+Added gate: st_67
+Input list: 70 98 104 
+j0 + x0_ + a1_ 
+Return: 322
+------------
+Added gate: st_68
+Input list: 90 96 28 34 70 98 104 
+t0_ w0 + o t0 w0_ + r t0 w0_ + o_ r_ j0 w0 + o_ r_ w0 x0_ + o_ r_ w0 a1_ + j0_ t0 w0_ x0 a1 
+Return: 324
+------------
+Added gate: st_69
+Input list: 90 28 34 70 98 104 
+t0_ + o_ r_ j0 + o_ r_ x0_ + o_ r_ a1_ 
+Return: 326
+------------
+Added gate: st_70
+Input list: 28 34 
+o_ r_ 
+Return: 328
+------------
+Added gate: st_71
+Input list: 70 98 104 
+j0 + x0_ + a1_ 
+Return: 330
+------------
+Added gate: st_72
+Input list: 28 54 118 88 94 142 112 58 176 154 162 168 
+o_ b0_ h1 + o_ s0_ h1 + b0_ v0 h1 + s0_ v0 h1 + o_ h1 t1_ + v0 h1 t1_ + o b0_ v0_ e1 + o s0_ v0_ e1 + o v0_ e1 t1_ + b0 d0_ s0 t1 k2 + b0 s0 t1 z1 k2 + b0 s0 t1 d2 k2 + b0 s0 t1 g2 k2 + o_ d0 h1 z1_ d2_ g2_ + d0 v0 h1 z1_ d2_ g2_ + o d0 v0_ e1 z1_ d2_ g2_ 
+Return: 332
+------------
+Added gate: st_73
+Input list: 28 118 94 112 
+o_ h1 + v0 h1 + o v0_ e1 
+Return: 334
+------------
+Added gate: st_74
+Input list: 54 88 142 58 154 162 168 
+b0_ + s0_ + t1_ + d0 z1_ d2_ g2_ 
+Return: 336
+------------
+Added gate: st_75
+Input list: 28 54 112 88 94 142 134 58 180 154 162 168 
+o_ b0_ e1 + o_ s0_ e1 + b0_ v0 e1 + s0_ v0 e1 + o_ e1 t1_ + v0 e1 t1_ + o b0_ v0_ p1 + o s0_ v0_ p1 + o v0_ p1 t1_ + b0 d0_ s0 t1 m2 + b0 s0 t1 z1 m2 + b0 s0 t1 d2 m2 + b0 s0 t1 g2 m2 + o_ d0 e1 z1_ d2_ g2_ + d0 v0 e1 z1_ d2_ g2_ + o d0 v0_ p1 z1_ d2_ g2_ 
+Return: 338
+------------
+Added gate: st_76
+Input list: 28 112 94 134 
+o_ e1 + v0 e1 + o v0_ p1 
+Return: 340
+------------
+Added gate: st_77
+Input list: 54 88 142 58 154 162 168 
+b0_ + s0_ + t1_ + d0 z1_ d2_ g2_ 
+Return: 342
+------------
+Added gate: st_78
+Input list: 90 114 96 126 132 28 34 70 98 104 
+t0_ f1 + w0_ f1 + f1 l1_ + f1 o1_ + o_ r_ j0 f1 + o_ r_ x0_ f1 + o_ r_ a1_ f1 + o t0 w0 f1_ l1 o1 + r t0 w0 f1_ l1 o1 + j0_ t0 w0 x0 a1 f1_ l1 o1 
+Return: 344
+------------
+Added gate: st_79
+Input list: 90 96 126 132 28 34 70 98 104 
+t0_ + w0_ + l1_ + o1_ + o_ r_ j0 + o_ r_ x0_ + o_ r_ a1_ 
+Return: 346
+------------
+Added gate: st_80
+Input list: 28 34 
+o_ r_ 
+Return: 348
+------------
+Added gate: st_81
+Input list: 70 98 104 
+j0 + x0_ + a1_ 
+Return: 350
+------------
+Added gate: st_82
+Input list: 90 132 96 126 28 34 70 98 104 
+t0_ o1 + w0_ o1 + l1_ o1 + o_ r_ j0 o1 + o_ r_ x0_ o1 + o_ r_ a1_ o1 + o t0 w0 l1 o1_ + r t0 w0 l1 o1_ + j0_ t0 w0 x0 a1 l1 o1_ 
+Return: 352
+------------
+Added gate: st_83
+Input list: 90 96 126 28 34 70 98 104 
+t0_ + w0_ + l1_ + o_ r_ j0 + o_ r_ x0_ + o_ r_ a1_ 
+Return: 354
+------------
+Added gate: st_84
+Input list: 28 34 
+o_ r_ 
+Return: 356
+------------
+Added gate: st_85
+Input list: 70 98 104 
+j0 + x0_ + a1_ 
+Return: 358
+------------
+Added gate: st_86
+Input list: 28 54 134 88 94 142 130 58 182 154 162 168 
+o_ b0_ p1 + o_ s0_ p1 + b0_ v0 p1 + s0_ v0 p1 + o_ p1 t1_ + v0 p1 t1_ + o b0_ v0_ n1 + o s0_ v0_ n1 + o v0_ n1 t1_ + b0 d0_ s0 t1 n2 + b0 s0 t1 z1 n2 + b0 s0 t1 d2 n2 + b0 s0 t1 g2 n2 + o_ d0 p1 z1_ d2_ g2_ + d0 v0 p1 z1_ d2_ g2_ + o d0 v0_ n1 z1_ d2_ g2_ 
+Return: 360
+------------
+Added gate: st_87
+Input list: 28 134 94 130 
+o_ p1 + v0 p1 + o v0_ n1 
+Return: 362
+------------
+Added gate: st_88
+Input list: 54 88 142 58 154 162 168 
+b0_ + s0_ + t1_ + d0 z1_ d2_ g2_ 
+Return: 364
+------------
+Added gate: st_89
+Input list: 18 28 54 88 94 142 2 48 58 154 162 168 
+j o_ b0_ + j o_ s0_ + j b0_ v0 + j s0_ v0 + j o_ t1_ + j v0 t1_ + b o b0_ v0_ + b o s0_ v0_ + b o v0_ t1_ + y b0 d0_ s0 t1 + y b0 s0 t1 z1 + y b0 s0 t1 d2 + y b0 s0 t1 g2 + j o_ d0 z1_ d2_ g2_ + j d0 v0 z1_ d2_ g2_ + b o d0 v0_ z1_ d2_ g2_ 
+Return: 366
+------------
+Added gate: st_90
+Input list: 28 54 88 94 142 58 154 162 168 
+o_ b0_ + o_ s0_ + b0_ v0 + s0_ v0 + o_ t1_ + v0 t1_ + o_ d0 z1_ d2_ g2_ + d0 v0 z1_ d2_ g2_ 
+Return: 368
+------------
+Added gate: st_91
+Input list: 54 88 142 58 154 162 168 
+b0_ + s0_ + t1_ + d0 z1_ d2_ g2_ 
+Return: 370
+------------
+Added gate: st_92
+Input list: 2 28 54 88 94 142 8 56 58 154 162 168 
+b o_ b0_ + b o_ s0_ + b b0_ v0 + b s0_ v0 + b o_ t1_ + b v0 t1_ + e o b0_ v0_ + e o s0_ v0_ + e o v0_ t1_ + b0 c0 d0_ s0 t1 + b0 c0 s0 t1 z1 + b0 c0 s0 t1 d2 + b0 c0 s0 t1 g2 + b o_ d0 z1_ d2_ g2_ + b d0 v0 z1_ d2_ g2_ + e o d0 v0_ z1_ d2_ g2_ 
+Return: 372
+------------
+Added gate: st_93
+Input list: 28 54 88 94 142 58 154 162 168 
+o_ b0_ + o_ s0_ + b0_ v0 + s0_ v0 + o_ t1_ + v0 t1_ + o_ d0 z1_ d2_ g2_ + d0 v0 z1_ d2_ g2_ 
+Return: 374
+------------
+Added gate: st_94
+Input list: 54 88 142 58 154 162 168 
+b0_ + s0_ + t1_ + d0 z1_ d2_ g2_ 
+Return: 376
+------------
+Added gate: st_95
+Input list: 8 28 54 88 94 142 42 58 64 154 162 168 
+e o_ b0_ + e o_ s0_ + e b0_ v0 + e s0_ v0 + e o_ t1_ + e v0 t1_ + o v b0_ v0_ + o v s0_ v0_ + o v v0_ t1_ + b0 d0_ g0 s0 t1 + b0 g0 s0 t1 z1 + b0 g0 s0 t1 d2 + b0 g0 s0 t1 g2 + e o_ d0 z1_ d2_ g2_ + e d0 v0 z1_ d2_ g2_ + o v d0 v0_ z1_ d2_ g2_ 
+Return: 378
+------------
+Added gate: st_96
+Input list: 28 54 88 94 142 58 154 162 168 
+o_ b0_ + o_ s0_ + b0_ v0 + s0_ v0 + o_ t1_ + v0 t1_ + o_ d0 z1_ d2_ g2_ + d0 v0 z1_ d2_ g2_ 
+Return: 380
+------------
+Added gate: st_97
+Input list: 54 88 142 58 154 162 168 
+b0_ + s0_ + t1_ + d0 z1_ d2_ g2_ 
+Return: 382
+------------
+Added gate: st_98
+Input list: 28 42 54 88 94 142 50 58 72 154 162 168 
+o_ v b0_ + o_ v s0_ + v b0_ v0 + v s0_ v0 + o_ v t1_ + v v0 t1_ + o z b0_ v0_ + o z s0_ v0_ + o z v0_ t1_ + b0 d0_ k0 s0 t1 + b0 k0 s0 t1 z1 + b0 k0 s0 t1 d2 + b0 k0 s0 t1 g2 + o_ v d0 z1_ d2_ g2_ + v d0 v0 z1_ d2_ g2_ + o z d0 v0_ z1_ d2_ g2_ 
+Return: 384
+------------
+Added gate: st_99
+Input list: 28 54 88 94 142 58 154 162 168 
+o_ b0_ + o_ s0_ + b0_ v0 + s0_ v0 + o_ t1_ + v0 t1_ + o_ d0 z1_ d2_ g2_ + d0 v0 z1_ d2_ g2_ 
+Return: 386
+------------
+Added gate: st_100
+Input list: 54 88 142 58 154 162 168 
+b0_ + s0_ + t1_ + d0 z1_ d2_ g2_ 
+Return: 388
+------------
+Added gate: st_101
+Input list: 28 54 152 88 94 142 170 16 58 154 162 168 
+o_ b0_ y1 + o_ s0_ y1 + b0_ v0 y1 + s0_ v0 y1 + o_ t1_ y1 + v0 t1_ y1 + o b0_ v0_ h2 + o s0_ v0_ h2 + o v0_ t1_ h2 + i b0 d0_ s0 t1 + i b0 s0 t1 z1 + i b0 s0 t1 d2 + i b0 s0 t1 g2 + o_ d0 y1 z1_ d2_ g2_ + d0 v0 y1 z1_ d2_ g2_ + o d0 v0_ z1_ d2_ g2_ h2 
+Return: 390
+------------
+Added gate: st_102
+Input list: 28 152 94 170 
+o_ y1 + v0 y1 + o v0_ h2 
+Return: 392
+------------
+Added gate: st_103
+Input list: 54 88 142 58 154 162 168 
+b0_ + s0_ + t1_ + d0 z1_ d2_ g2_ 
+Return: 394
+------------
+Added gate: st_104
+Input list: 28 54 170 88 94 142 166 24 58 154 162 168 
+o_ b0_ h2 + o_ s0_ h2 + b0_ v0 h2 + s0_ v0 h2 + o_ t1_ h2 + v0 t1_ h2 + o b0_ v0_ f2 + o s0_ v0_ f2 + o v0_ t1_ f2 + m b0 d0_ s0 t1 + m b0 s0 t1 z1 + m b0 s0 t1 d2 + m b0 s0 t1 g2 + o_ d0 z1_ d2_ g2_ h2 + d0 v0 z1_ d2_ g2_ h2 + o d0 v0_ z1_ d2_ f2 g2_ 
+Return: 396
+------------
+Added gate: st_105
+Input list: 28 170 94 166 
+o_ h2 + v0 h2 + o v0_ f2 
+Return: 398
+------------
+Added gate: st_106
+Input list: 54 88 142 58 154 162 168 
+b0_ + s0_ + t1_ + d0 z1_ d2_ g2_ 
+Return: 400
+------------
+Added gate: st_107
+Input list: 44 54 88 58 154 162 168 
+w + b0 s0_ + b0 d0 z1_ d2_ g2_ 
+Return: 402
+------------
+Added gate: st_108
+Input list: 88 58 154 162 168 
+s0_ + d0 z1_ d2_ g2_ 
+Return: 404
+------------
+Added gate: st_109
+Input list: 28 54 166 88 94 142 178 32 58 154 162 168 
+o_ b0_ f2 + o_ s0_ f2 + b0_ v0 f2 + s0_ v0 f2 + o_ t1_ f2 + v0 t1_ f2 + o b0_ v0_ l2 + o s0_ v0_ l2 + o v0_ t1_ l2 + q b0 d0_ s0 t1 + q b0 s0 t1 z1 + q b0 s0 t1 d2 + q b0 s0 t1 g2 + o_ d0 z1_ d2_ f2 g2_ + d0 v0 z1_ d2_ f2 g2_ + o d0 v0_ z1_ d2_ g2_ l2 
+Return: 406
+------------
+Added gate: st_110
+Input list: 28 166 94 178 
+o_ f2 + v0 f2 + o v0_ l2 
+Return: 408
+------------
+Added gate: st_111
+Input list: 54 88 142 58 154 162 168 
+b0_ + s0_ + t1_ + d0 z1_ d2_ g2_ 
+Return: 410
+------------
+Added gate: st_112
+Input list: 28 54 178 88 94 142 18 40 58 154 162 168 
+o_ b0_ l2 + o_ s0_ l2 + b0_ v0 l2 + s0_ v0 l2 + o_ t1_ l2 + v0 t1_ l2 + j o b0_ v0_ + j o s0_ v0_ + j o v0_ t1_ + u b0 d0_ s0 t1 + u b0 s0 t1 z1 + u b0 s0 t1 d2 + u b0 s0 t1 g2 + o_ d0 z1_ d2_ g2_ l2 + d0 v0 z1_ d2_ g2_ l2 + j o d0 v0_ z1_ d2_ g2_ 
+Return: 412
+------------
+Added gate: st_113
+Input list: 28 178 94 18 
+o_ l2 + v0 l2 + j o v0_ 
+Return: 414
+------------
+Added gate: st_114
+Input list: 54 88 142 58 154 162 168 
+b0_ + s0_ + t1_ + d0 z1_ d2_ g2_ 
+Return: 416
+------------
+Added gate: st_115
+Input list: 28 46 90 96 110 114 126 132 
+o_ x + x t0 + x w0_ + x d1 + x f1 + x l1 + x o1 + o t0_ w0 d1 f1_ l1_ o1_ 
+Return: 418
+------------
+Added gate: st_116
+Input list: 28 90 96 110 114 126 132 
+o_ + t0 + w0_ + d1 + f1 + l1 + o1 
+Return: 420
+------------
+Added gate: st_117
+Input list: 28 52 90 96 108 114 126 132 
+o_ a0 + a0 t0 + a0 w0_ + a0 c1 + a0 f1 + a0 l1 + a0 o1 + o t0_ w0 c1 f1_ l1_ o1_ 
+Return: 422
+------------
+Added gate: st_118
+Input list: 28 90 96 108 114 126 132 
+o_ + t0 + w0_ + c1 + f1 + l1 + o1 
+Return: 424
+------------
+Added gate: st_119
+Input list: 28 50 54 88 94 142 30 58 78 154 162 168 
+o_ z b0_ + o_ z s0_ + z b0_ v0 + z s0_ v0 + o_ z t1_ + z v0 t1_ + o p b0_ v0_ + o p s0_ v0_ + o p v0_ t1_ + b0 d0_ n0 s0 t1 + b0 n0 s0 t1 z1 + b0 n0 s0 t1 d2 + b0 n0 s0 t1 g2 + o_ z d0 z1_ d2_ g2_ + z d0 v0 z1_ d2_ g2_ + o p d0 v0_ z1_ d2_ g2_ 
+Return: 426
+------------
+Added gate: st_120
+Input list: 28 54 88 94 142 58 154 162 168 
+o_ b0_ + o_ s0_ + b0_ v0 + s0_ v0 + o_ t1_ + v0 t1_ + o_ d0 z1_ d2_ g2_ + d0 v0 z1_ d2_ g2_ 
+Return: 428
+------------
+Added gate: st_121
+Input list: 54 88 142 58 154 162 168 
+b0_ + s0_ + t1_ + d0 z1_ d2_ g2_ 
+Return: 430
+------------
+Added gate: st_122
+Input list: 28 30 54 88 94 142 38 6 58 154 162 168 
+o_ p b0_ + o_ p s0_ + p b0_ v0 + p s0_ v0 + o_ p t1_ + p v0 t1_ + o t b0_ v0_ + o t s0_ v0_ + o t v0_ t1_ + d b0 d0_ s0 t1 + d b0 s0 t1 z1 + d b0 s0 t1 d2 + d b0 s0 t1 g2 + o_ p d0 z1_ d2_ g2_ + p d0 v0 z1_ d2_ g2_ + o t d0 v0_ z1_ d2_ g2_ 
+Return: 432
+------------
+Added gate: st_123
+Input list: 28 54 88 94 142 58 154 162 168 
+o_ b0_ + o_ s0_ + b0_ v0 + s0_ v0 + o_ t1_ + v0 t1_ + o_ d0 z1_ d2_ g2_ + d0 v0 z1_ d2_ g2_ 
+Return: 434
+------------
+Added gate: st_124
+Input list: 54 88 142 58 154 162 168 
+b0_ + s0_ + t1_ + d0 z1_ d2_ g2_ 
+Return: 436
+------------
+Added gate: st_125
+Input list: 28 38 54 88 94 142 74 12 58 154 162 168 
+o_ t b0_ + o_ t s0_ + t b0_ v0 + t s0_ v0 + o_ t t1_ + t v0 t1_ + o b0_ l0 v0_ + o l0 s0_ v0_ + o l0 v0_ t1_ + g b0 d0_ s0 t1 + g b0 s0 t1 z1 + g b0 s0 t1 d2 + g b0 s0 t1 g2 + o_ t d0 z1_ d2_ g2_ + t d0 v0 z1_ d2_ g2_ + o d0 l0 v0_ z1_ d2_ g2_ 
+Return: 438
+------------
+Added gate: st_126
+Input list: 28 54 88 94 142 58 154 162 168 
+o_ b0_ + o_ s0_ + b0_ v0 + s0_ v0 + o_ t1_ + v0 t1_ + o_ d0 z1_ d2_ g2_ + d0 v0 z1_ d2_ g2_ 
+Return: 440
+------------
+Added gate: st_127
+Input list: 54 88 142 58 154 162 168 
+b0_ + s0_ + t1_ + d0 z1_ d2_ g2_ 
+Return: 442
+------------
+Optimized literal count: 954

@@ -1,0 +1,22 @@
+Original literal count: 522
+Added gate: st_0
+Input list: 2 4 6 8 10 12 14 16 
+b_ c d e_ f + b c d_ e f_ + b c_ d_ f g + c d_ e_ f g + c d e_ f_ g + b_ d_ e f h + b_ c f_ g h + b c_ f_ g h + b c_ e g_ h + b_ d e g_ h + b c e_ g_ h + b d_ f g_ h + c d f_ g_ h + b_ c d e h_ + b c_ d e h_ + b c e_ f h_ + d_ e f g h_ + c_ d e_ h i + b_ c_ g h i + b d e_ h_ i + d e f_ h_ i + c d g_ h_ i + b c_ d f i_ + c d_ e f i_ + b d e_ g i_ + b_ d f g i_ + b c f_ g i_ + b e f g_ i_ + b c d h_ i_ 
+Return: 18
+------------
+Added gate: st_1
+Input list: 2 4 6 10 12 14 16 
+b_ c d f + c d_ f g + c d f_ g + b c g_ h + b c f h_ + c_ d h i + b d h_ i + b d g i_ 
+Return: 20
+------------
+Added gate: st_2
+Input list: 2 6 10 12 14 
+b_ d f + d_ f g + d f_ g + b g_ h + b f h_ 
+Return: 22
+------------
+Added gate: st_3
+Input list: 2 6 12 14 
+b_ d + d_ g + b h_ 
+Return: 24
+------------
+Optimized literal count: 196

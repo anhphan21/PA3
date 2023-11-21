@@ -1,0 +1,30 @@
+.model sample
+.inputs a b c d e f g h i j k l m n
+.outputs o p
+.names st_1 st_0 o
+11 1
+.names st_4 f p
+11 1
+.names b d e st_0
+111 1
+.names a c j i g k h st_1
+011---- 1
+0011--- 1
+000-1-- 1
+111--1- 1
+1011--1 1
+.names st_3 j c g st_2
+11-- 1
+-001 1
+.names c i st_3
+1- 1
+01 1
+.names st_6 st_5 d e l n st_4
+11---- 1
+--0000 1
+.names c e st_5
+11 1
+.names d m g h n st_6
+11--- 1
+0-110 1
+.end

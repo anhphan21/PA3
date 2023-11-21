@@ -1,0 +1,202 @@
+Original literal count: 7483
+Added gate: st_0
+Input list: 2 12 14 16 22 
+b g h + b g i_ + b h l_ + g_ h l_ + b i_ l_ + g_ i_ l_ + b_ g h_ i + b_ h_ i l + g_ h_ i l 
+Return: 28
+------------
+Added gate: st_1
+Input list: 12 14 16 22 
+g h + g i_ + h l_ + i_ l_ 
+Return: 30
+------------
+Added gate: st_2
+Input list: 14 16 
+h + i_ 
+Return: 32
+------------
+Added gate: st_3
+Input list: 22 4 6 8 10 12 0 2 20 24 26 
+l + c d e f + c e f g + a b e k + c d e k + a e f k + b e f_ k + c e g k + d e f m + e f g m + d e k m + e g k m + c d f n + c f g n + c d k n + c g k n + d f m n + f g m n + d k m n + a b e f m + a c e f m + b c_ e f m + a c e k m + b c_ e k m + a c f m n + b c_ f m n 
+Return: 34
+------------
+Added gate: st_4
+Input list: 6 8 10 12 20 26 0 24 
+d e f + e f g + d e k + e g k + d f n + f g n + d k n + g k n + a e f m + a e k m + a f m n 
+Return: 36
+------------
+Added gate: st_5
+Input list: 8 10 20 26 
+e f + e k + f n + k n 
+Return: 38
+------------
+Added gate: st_6
+Input list: 10 20 
+f + k 
+Return: 40
+------------
+Added gate: st_7
+Input list: 2 12 6 20 10 24 4 26 8 
+b g + d g + b k + f k + b m + c m + b n + e n 
+Return: 42
+------------
+Added gate: st_8
+Input list: 12 20 24 26 
+g + k + m + n 
+Return: 44
+------------
+Added gate: st_9
+Input list: 0 14 
+a_ h_ 
+Return: 46
+------------
+Added gate: st_10
+Input list: 2 16 18 22 4 6 8 10 12 20 24 26 
+b_ i j l + c d e f i j + b_ g i k m n + b_ c e f g i j + b_ c d e i j k + b_ c e g i j k + b_ c_ e_ f_ g i l + c e f g_ i j l + b_ c_ d_ e_ i k l + b_ c_ e_ g i k l + c d e i j k_ l + c e g_ i j k_ l + b_ d e f i j m + b_ e f g i j m + b_ d e i j k m + b_ e g i j k m + b_ d_ e_ f_ i l m + b_ e_ f_ g i l m + b_ d_ e_ i k l m + b_ e_ g i k l m + d e f i j l m_ + e f g_ i j l m_ + d e i j k_ l m_ + e g_ i j k_ l m_ + b_ c d f i j n + b_ c f g i j n + b_ c d i j k n + b_ c g i j k n + b_ c_ d_ f_ i l n + b_ c_ f_ g i l n + b_ c_ d_ i k l n + b_ c_ g i k l n + b_ d f i j m n + b_ f g i j m n + b_ d i j k m n + b_ d_ f_ i l m n + b_ f_ g i l m n + b_ d_ i k l m n + c d f i j l n_ + c f g_ i j l n_ + c d i j k_ l n_ + c g_ i j k_ l n_ + d f i j l m_ n_ + f g_ i j l m_ n_ + d i j k_ l m_ n_ + c d_ e f g_ i_ j l_ + b_ d g_ i_ j_ k m n + b_ d_ g_ i_ k l_ m n + b_ g_ i_ j_ k l_ m n + b_ c_ d e_ g_ i_ j_ k l + b_ c d_ e g_ i_ j k l_ + b_ d e_ f_ g_ i_ j_ l m + b_ d e_ g_ i_ j_ k l m + b_ d_ e f g_ i_ j l_ m + b_ d_ e g_ i_ j k l_ m + b_ c_ d f_ g_ i_ j_ l n + b_ c_ d g_ i_ j_ k l n + b_ c d_ f g_ i_ j l_ n + b_ c d_ g_ i_ j k l_ n + c d e f g i k m n + b_ d f_ g_ i_ j_ l m n + b_ d_ f g_ i_ j l_ m n + b c_ d_ e f g i_ j l_ m_ + c d e f g_ i_ j_ k m n + c d_ e f g_ i k l m n + c d e f_ g i k_ l m n + c d_ e f_ g_ i k_ l m n + c d_ e f g_ i_ k l_ m n + c e f g_ i_ j_ k l_ m n + c_ d e f g i k l m_ n + c_ d_ e f g_ i k l m_ n + c_ d e f_ g i k_ l m_ n + c_ d_ e f_ g_ i k_ l m_ n + c d e_ f g i k l m n_ + c d_ e_ f g_ i k l m n_ + c d e_ f_ g i k_ l m n_ + c d_ e_ f_ g_ i k_ l m n_ + c_ d e_ f g i k l m_ n_ + c_ d_ e_ f g_ i k l m_ n_ + c_ d e_ f_ g i k_ l m_ n_ + b c_ d_ e f_ g i_ j k_ l_ m + b c_ d_ e f g i_ j_ k_ m n + c d e f_ g_ i_ j_ k_ l m n + b c_ d_ e f_ g i_ k_ l_ m n + b c_ d_ e g i_ j_ k_ l_ m n + b c d_ e f g i_ j_ k m_ n + c_ d e f g_ i_ j_ k l m_ n + c_ d e f_ g_ i_ j_ k_ l m_ n + b c_ d_ e f g i_ k l_ m_ n + b d_ e f g i_ j_ k l_ m_ n + c d e_ f g_ i_ j_ k l m n_ + c d e_ f_ g_ i_ j_ k_ l m n_ + c_ d e_ f g_ i_ j_ k l m_ n_ + b c d_ e f_ g i_ j_ k_ l m_ n + b c d_ e_ f g i_ j_ k l m_ n_ 
+Return: 48
+------------
+Added gate: st_11
+Input list: 16 18 22 12 20 24 26 4 8 10 6 
+i j l + g i k m n + c e f g i j + c d e i j k + c e g i j k + c_ e_ f_ g i l + c_ d_ e_ i k l + c_ e_ g i k l + d e f i j m + e f g i j m + d e i j k m + e g i j k m + d_ e_ f_ i l m + e_ f_ g i l m + d_ e_ i k l m + e_ g i k l m + c d f i j n + c f g i j n + c d i j k n + c g i j k n + c_ d_ f_ i l n + c_ f_ g i l n + c_ d_ i k l n + c_ g i k l n + d f i j m n + f g i j m n + d i j k m n + d_ f_ i l m n + f_ g i l m n + d_ i k l m n + d g_ i_ j_ k m n + d_ g_ i_ k l_ m n + g_ i_ j_ k l_ m n + c_ d e_ g_ i_ j_ k l + c d_ e g_ i_ j k l_ + d e_ f_ g_ i_ j_ l m + d e_ g_ i_ j_ k l m + d_ e f g_ i_ j l_ m + d_ e g_ i_ j k l_ m + c_ d f_ g_ i_ j_ l n + c_ d g_ i_ j_ k l n + c d_ f g_ i_ j l_ n + c d_ g_ i_ j k l_ n + d f_ g_ i_ j_ l m n + d_ f g_ i_ j l_ m n 
+Return: 50
+------------
+Added gate: st_12
+Input list: 18 22 12 20 24 26 4 8 10 6 
+j l + g k m n + c e f g j + c d e j k + c e g j k + c_ e_ f_ g l + c_ d_ e_ k l + c_ e_ g k l + d e f j m + e f g j m + d e j k m + e g j k m + d_ e_ f_ l m + e_ f_ g l m + d_ e_ k l m + e_ g k l m + c d f j n + c f g j n + c d j k n + c g j k n + c_ d_ f_ l n + c_ f_ g l n + c_ d_ k l n + c_ g k l n + d f j m n + f g j m n + d j k m n + d_ f_ l m n + f_ g l m n + d_ k l m n 
+Return: 52
+------------
+Added gate: st_13
+Input list: 22 4 8 10 12 6 20 24 26 
+l + c e f g + c d e k + c e g k + d e f m + e f g m + d e k m + e g k m + c d f n + c f g n + c d k n + c g k n + d f m n + f g m n + d k m n 
+Return: 54
+------------
+Added gate: st_14
+Input list: 8 10 12 6 20 26 
+e f g + d e k + e g k + d f n + f g n + d k n + g k n 
+Return: 56
+------------
+Added gate: st_15
+Input list: 10 12 6 20 
+f g + d k + g k 
+Return: 58
+------------
+Added gate: st_16
+Input list: 10 20 
+f + k 
+Return: 60
+------------
+Added gate: st_17
+Input list: 0 2 16 20 10 18 22 4 6 12 24 
+a_ b_ i k + a_ b_ f i j + a_ b_ f_ i l + a_ b_ i j l + a_ c d f i j + a_ c f g_ i j + a_ c d f i k + b_ c_ d_ f_ i k + a_ c f g_ i k + b_ c_ f_ g_ i k + a_ b_ d g_ j_ k + b_ c_ d_ f_ i l + b_ c_ f_ g_ i l + a_ b_ d_ g_ k l_ + a_ b_ g_ j_ k l_ + a_ d f i j m_ + a_ f g_ i j m_ + a_ d f i k m_ + b_ d_ f_ i k m_ + a_ f g_ i k m_ + b_ f_ g_ i k m_ + a_ b_ c j_ k m_ + a_ c f j_ k m_ + b_ c f_ j_ k m_ + f g_ i j k_ m_ + b_ d_ f_ i l m_ + b_ f_ g_ i l m_ + b_ c f_ j_ l m_ + f_ g_ i k_ l m_ + g_ i j k_ l m_ + c f_ j_ k_ l m_ + a_ c_ f j l_ m_ + a_ b_ c_ k l_ m_ + a_ c_ f k l_ m_ + b_ c_ f_ k l_ m_ + a_ b_ j_ k l_ m_ + a_ f j_ k l_ m_ + b_ f_ j_ k l_ m_ + c_ f j k_ l_ m_ + a_ c d f g_ j_ k + b_ c_ d f_ g_ j_ k + b_ c_ d_ f i j k_ + b_ c_ f g_ i j k_ + a_ b_ d f_ g_ j_ l + b_ c_ d f_ g_ j_ l + a_ c d f_ i k_ l + a_ c f_ g_ i k_ l + a_ c d i j k_ l + b_ c_ d_ i j k_ l + a_ c g_ i j k_ l + b_ c_ g_ i j k_ l + a_ b_ d_ f g_ j l_ + a_ c d_ f g_ j l_ + a_ c d_ f g_ k l_ + b_ c_ d_ f_ g_ k l_ + a_ c f g_ j_ k l_ + b_ c_ f_ g_ j_ k l_ + a_ d f g_ j_ k m_ + b_ d f_ g_ j_ k m_ + b_ d_ f i j k_ m_ + b_ d f_ g_ j_ l m_ + a_ d f_ i k_ l m_ + a_ d i j k_ l m_ + b_ d_ i j k_ l m_ + d f_ g_ j_ k_ l m_ + a_ d_ f g_ j l_ m_ + a_ d_ f g_ k l_ m_ + b_ d_ f_ g_ k l_ m_ + d_ f g_ j k_ l_ m_ + a_ c d f_ g_ j_ k_ l + b_ c_ d_ f g_ j k_ l_ 
+Return: 62
+------------
+Added gate: st_18
+Input list: 2 16 20 10 18 22 4 6 12 24 
+b_ i k + b_ f i j + b_ f_ i l + b_ i j l + c d f i j + c f g_ i j + c d f i k + c f g_ i k + b_ d g_ j_ k + b_ d_ g_ k l_ + b_ g_ j_ k l_ + d f i j m_ + f g_ i j m_ + d f i k m_ + f g_ i k m_ + b_ c j_ k m_ + c f j_ k m_ + c_ f j l_ m_ + b_ c_ k l_ m_ + c_ f k l_ m_ + b_ j_ k l_ m_ + f j_ k l_ m_ + c d f g_ j_ k + b_ d f_ g_ j_ l + c d f_ i k_ l + c f_ g_ i k_ l + c d i j k_ l + c g_ i j k_ l + b_ d_ f g_ j l_ + c d_ f g_ j l_ + c d_ f g_ k l_ + c f g_ j_ k l_ + d f g_ j_ k m_ + d f_ i k_ l m_ + d i j k_ l m_ + d_ f g_ j l_ m_ + d_ f g_ k l_ m_ + c d f_ g_ j_ k_ l 
+Return: 64
+------------
+Added gate: st_19
+Input list: 2 16 18 4 6 12 20 24 22 
+b_ i j + c d i j + c g_ i j + c d i k + c g_ i k + d i j m_ + g_ i j m_ + d i k m_ + g_ i k m_ + c j_ k m_ + c_ j l_ m_ + c_ k l_ m_ + j_ k l_ m_ + c d g_ j_ k + b_ d_ g_ j l_ + c d_ g_ j l_ + c d_ g_ k l_ + c g_ j_ k l_ + d g_ j_ k m_ + d_ g_ j l_ m_ + d_ g_ k l_ m_ 
+Return: 66
+------------
+Added gate: st_20
+Input list: 2 18 4 6 12 20 24 
+b_ j + c d j + c g_ j + c d k + c g_ k + d j m_ + g_ j m_ + d k m_ + g_ k m_ 
+Return: 68
+------------
+Added gate: st_21
+Input list: 2 4 6 12 24 
+b_ + c d + c g_ + d m_ + g_ m_ 
+Return: 70
+------------
+Added gate: st_22
+Input list: 6 12 
+d + g_ 
+Return: 72
+------------
+Added gate: st_23
+Input list: 4 14 18 2 12 24 6 16 22 
+c h j_ + b g m + b h m + c h m + b c g j_ + c d g j_ + c g i_ j_ + b c_ g l_ + b g j_ l_ + b h j_ l_ + c d g m + c g i_ m + c d_ i_ j_ l + b d i_ j m + c d i_ j m + b d_ i_ l m + c d_ i_ l m + b i_ j l m + c i_ j l m + c_ d g l_ m_ + d g j_ l_ m_ 
+Return: 74
+------------
+Added gate: st_24
+Input list: 14 18 24 2 12 6 16 22 
+h j_ + h m + b g j_ + d g j_ + g i_ j_ + d g m + g i_ m + d_ i_ j_ l + d i_ j m + d_ i_ l m + i_ j l m 
+Return: 76
+------------
+Added gate: st_25
+Input list: 14 6 12 16 18 22 
+h + d g + g i_ + d i_ j + d_ i_ l + i_ j l 
+Return: 78
+------------
+Added gate: st_26
+Input list: 12 6 18 22 
+g + d j + d_ l + j l 
+Return: 80
+------------
+Added gate: st_27
+Input list: 6 22 
+d + l 
+Return: 82
+------------
+Added gate: st_28
+Input list: 2 16 6 12 18 10 20 8 22 4 24 26 
+b_ i + b_ d g_ j_ + b_ f j_ k_ + e f j_ k_ + b_ d_ g_ l_ + b_ g_ j_ l_ + b_ f_ k_ l_ + e f_ k_ l_ + b_ j_ k_ l_ + e j_ k_ l_ + b_ c j_ m_ + b_ c_ l_ m_ + b_ j_ l_ m_ + c d e f i + c e f g_ i + c d e i k_ + c e g_ i k_ + d e f i m_ + e f g_ i m_ + c e f j_ m_ + d e i k_ m_ + e g_ i k_ m_ + c e j_ k_ m_ + c_ e f l_ m_ + e f j_ l_ m_ + c_ e k_ l_ m_ + c d f i n_ + c f g_ i n_ + c d i k_ n_ + c g_ i k_ n_ + d f i m_ n_ + f g_ i m_ n_ + c f j_ m_ n_ + d i k_ m_ n_ + c_ f l_ m_ n_ + c d e f g_ j_ + c d e g_ j_ k_ + c d_ e f g_ l_ + c e f g_ j_ l_ + c d_ e g_ k_ l_ + d e f g_ j_ m_ + d e g_ j_ k_ m_ + d_ e f g_ l_ m_ + d_ e g_ k_ l_ m_ + c d f g_ j_ n_ + c d g_ j_ k_ n_ + c d_ f g_ l_ n_ + c d_ g_ k_ l_ n_ + d f g_ j_ m_ n_ + d_ f g_ l_ m_ n_ 
+Return: 84
+------------
+Added gate: st_29
+Input list: 2 4 6 8 10 12 20 24 26 
+b_ + c d e f + c e f g_ + c d e k_ + c e g_ k_ + d e f m_ + e f g_ m_ + d e k_ m_ + e g_ k_ m_ + c d f n_ + c f g_ n_ + c d k_ n_ + c g_ k_ n_ + d f m_ n_ + f g_ m_ n_ + d k_ m_ n_ 
+Return: 86
+------------
+Added gate: st_30
+Input list: 6 8 10 12 20 26 
+d e f + e f g_ + d e k_ + e g_ k_ + d f n_ + f g_ n_ + d k_ n_ + g_ k_ n_ 
+Return: 88
+------------
+Added gate: st_31
+Input list: 8 10 20 26 
+e f + e k_ + f n_ + k_ n_ 
+Return: 90
+------------
+Added gate: st_32
+Input list: 10 20 
+f + k_ 
+Return: 92
+------------
+Added gate: st_33
+Input list: 0 2 16 26 8 18 22 10 20 6 12 4 24 
+a_ b_ i n + a_ b_ e i j + a_ b_ e_ i l + a_ b_ i j l + b_ e_ f j_ k_ l + a_ e f_ j k_ l_ + a_ b_ d g_ j_ n + a_ b_ f j_ k_ n + a_ e f j_ k_ n + b_ e_ f j_ k_ n + a_ b_ d_ g_ l_ n + a_ b_ g_ j_ l_ n + a_ b_ f_ k_ l_ n + a_ e f_ k_ l_ n + b_ e_ f_ k_ l_ n + a_ b_ j_ k_ l_ n + a_ e j_ k_ l_ n + b_ e_ j_ k_ l_ n + a_ b_ c j_ m_ n + a_ b_ c_ l_ m_ n + a_ b_ j_ l_ m_ n + e_ f j_ k_ l n_ + e f_ j k_ l_ n_ + a_ c d e f i j + a_ c e f g_ i j + a_ c d e i j k_ + a_ c e g_ i j k_ + b_ c_ d_ e_ f_ i l + b_ c_ e_ f_ g_ i l + a_ b_ d e_ g_ j_ l + b_ c_ d_ e_ i k_ l + b_ c_ e_ g_ i k_ l + a_ b_ d_ e g_ j l_ + a_ d e f i j m_ + a_ e f g_ i j m_ + a_ d e i j k_ m_ + a_ e g_ i j k_ m_ + b_ d_ e_ f_ i l m_ + b_ e_ f_ g_ i l m_ + a_ b_ c e_ j_ l m_ + b_ c e_ f_ j_ l m_ + b_ d_ e_ i k_ l m_ + b_ e_ g_ i k_ l m_ + b_ c e_ j_ k_ l m_ + a_ b_ c_ e j l_ m_ + a_ c_ e f j l_ m_ + a_ c_ e j k_ l_ m_ + a_ c d e f i n + b_ c_ d_ e_ f_ i n + a_ c e f g_ i n + b_ c_ e_ f_ g_ i n + a_ c d e i k_ n + b_ c_ d_ e_ i k_ n + a_ c e g_ i k_ n + b_ c_ e_ g_ i k_ n + a_ d e f i m_ n + b_ d_ e_ f_ i m_ n + a_ e f g_ i m_ n + b_ e_ f_ g_ i m_ n + a_ c e f j_ m_ n + b_ c e_ f_ j_ m_ n + a_ d e i k_ m_ n + b_ d_ e_ i k_ m_ n + a_ e g_ i k_ m_ n + b_ e_ g_ i k_ m_ n + a_ c e j_ k_ m_ n + b_ c e_ j_ k_ m_ n + a_ c_ e f l_ m_ n + b_ c_ e_ f_ l_ m_ n + a_ e f j_ l_ m_ n + b_ e_ f_ j_ l_ m_ n + a_ c_ e k_ l_ m_ n + b_ c_ e_ k_ l_ m_ n + e g_ i j k_ m_ n_ + e_ g_ i k_ l m_ n_ + g_ i j k_ l m_ n_ + c e_ j_ k_ l m_ n_ + c_ e j k_ l_ m_ n_ + b_ c_ d e_ f_ g_ j_ l + b_ c_ d e_ g_ j_ k_ l + a_ c d_ e f g_ j l_ + a_ c d_ e g_ j k_ l_ + b_ d e_ f_ g_ j_ l m_ + b_ d e_ g_ j_ k_ l m_ + a_ d_ e f g_ j l_ m_ + a_ d_ e g_ j k_ l_ m_ + a_ c d e f g_ j_ n + b_ c_ d e_ f_ g_ j_ n + a_ c d e g_ j_ k_ n + b_ c_ d e_ g_ j_ k_ n + a_ c d_ e f g_ l_ n + b_ c_ d_ e_ f_ g_ l_ n + a_ c e f g_ j_ l_ n + b_ c_ e_ f_ g_ j_ l_ n + a_ c d_ e g_ k_ l_ n + b_ c_ d_ e_ g_ k_ l_ n + a_ d e f g_ j_ m_ n + b_ d e_ f_ g_ j_ m_ n + a_ d e g_ j_ k_ m_ n + b_ d e_ g_ j_ k_ m_ n + a_ d_ e f g_ l_ m_ n + b_ d_ e_ f_ g_ l_ m_ n + a_ d_ e g_ k_ l_ m_ n + b_ d_ e_ g_ k_ l_ m_ n + b_ c_ d_ e f_ i j n_ + b_ c_ e f_ g_ i j n_ + b_ c_ d_ e i j k_ n_ + b_ c_ e g_ i j k_ n_ + a_ c d e_ f i l n_ + a_ c e_ f g_ i l n_ + a_ c d f i j l n_ + b_ c_ d_ f_ i j l n_ + a_ c f g_ i j l n_ + b_ c_ f_ g_ i j l n_ + a_ c d e_ i k_ l n_ + a_ c e_ g_ i k_ l n_ + a_ c d i j k_ l n_ + b_ c_ d_ i j k_ l n_ + a_ c g_ i j k_ l n_ + b_ c_ g_ i j k_ l n_ + b_ d_ e f_ i j m_ n_ + b_ e f_ g_ i j m_ n_ + b_ d_ e i j k_ m_ n_ + a_ d e_ f i l m_ n_ + a_ e_ f g_ i l m_ n_ + a_ d f i j l m_ n_ + b_ d_ f_ i j l m_ n_ + a_ f g_ i j l m_ n_ + b_ f_ g_ i j l m_ n_ + a_ c e_ f j_ l m_ n_ + a_ d e_ i k_ l m_ n_ + a_ d i j k_ l m_ n_ + b_ d_ i j k_ l m_ n_ + d e_ g_ j_ k_ l m_ n_ + b_ c_ e f_ j l_ m_ n_ + d_ e g_ j k_ l_ m_ n_ + a_ c d e_ f g_ j_ l n_ + a_ c d e_ g_ j_ k_ l n_ + b_ c_ d_ e f_ g_ j l_ n_ + b_ c_ d_ e g_ j k_ l_ n_ + a_ d e_ f g_ j_ l m_ n_ + b_ d_ e f_ g_ j l_ m_ n_ 
+Return: 94
+------------
+Added gate: st_34
+Input list: 2 16 26 8 18 22 10 20 6 12 4 24 
+b_ i n + b_ e i j + b_ e_ i l + b_ i j l + e f_ j k_ l_ + b_ d g_ j_ n + b_ f j_ k_ n + e f j_ k_ n + b_ d_ g_ l_ n + b_ g_ j_ l_ n + b_ f_ k_ l_ n + e f_ k_ l_ n + b_ j_ k_ l_ n + e j_ k_ l_ n + b_ c j_ m_ n + b_ c_ l_ m_ n + b_ j_ l_ m_ n + c d e f i j + c e f g_ i j + c d e i j k_ + c e g_ i j k_ + b_ d e_ g_ j_ l + b_ d_ e g_ j l_ + d e f i j m_ + e f g_ i j m_ + d e i j k_ m_ + e g_ i j k_ m_ + b_ c e_ j_ l m_ + b_ c_ e j l_ m_ + c_ e f j l_ m_ + c_ e j k_ l_ m_ + c d e f i n + c e f g_ i n + c d e i k_ n + c e g_ i k_ n + d e f i m_ n + e f g_ i m_ n + c e f j_ m_ n + d e i k_ m_ n + e g_ i k_ m_ n + c e j_ k_ m_ n + c_ e f l_ m_ n + e f j_ l_ m_ n + c_ e k_ l_ m_ n + c d_ e f g_ j l_ + c d_ e g_ j k_ l_ + d_ e f g_ j l_ m_ + d_ e g_ j k_ l_ m_ + c d e f g_ j_ n + c d e g_ j_ k_ n + c d_ e f g_ l_ n + c e f g_ j_ l_ n + c d_ e g_ k_ l_ n + d e f g_ j_ m_ n + d e g_ j_ k_ m_ n + d_ e f g_ l_ m_ n + d_ e g_ k_ l_ m_ n + c d e_ f i l n_ + c e_ f g_ i l n_ + c d f i j l n_ + c f g_ i j l n_ + c d e_ i k_ l n_ + c e_ g_ i k_ l n_ + c d i j k_ l n_ + c g_ i j k_ l n_ + d e_ f i l m_ n_ + e_ f g_ i l m_ n_ + d f i j l m_ n_ + f g_ i j l m_ n_ + c e_ f j_ l m_ n_ + d e_ i k_ l m_ n_ + d i j k_ l m_ n_ + c d e_ f g_ j_ l n_ + c d e_ g_ j_ k_ l n_ + d e_ f g_ j_ l m_ n_ 
+Return: 96
+------------
+Added gate: st_35
+Input list: 2 16 18 10 20 22 26 4 6 12 24 
+b_ i j + f_ j k_ l_ + f j_ k_ n + f_ k_ l_ n + j_ k_ l_ n + c d f i j + c f g_ i j + c d i j k_ + c g_ i j k_ + b_ d_ g_ j l_ + d f i j m_ + f g_ i j m_ + d i j k_ m_ + g_ i j k_ m_ + b_ c_ j l_ m_ + c_ f j l_ m_ + c_ j k_ l_ m_ + c d f i n + c f g_ i n + c d i k_ n + c g_ i k_ n + d f i m_ n + f g_ i m_ n + c f j_ m_ n + d i k_ m_ n + g_ i k_ m_ n + c j_ k_ m_ n + c_ f l_ m_ n + f j_ l_ m_ n + c_ k_ l_ m_ n + c d_ f g_ j l_ + c d_ g_ j k_ l_ + d_ f g_ j l_ m_ + d_ g_ j k_ l_ m_ + c d f g_ j_ n + c d g_ j_ k_ n + c d_ f g_ l_ n + c f g_ j_ l_ n + c d_ g_ k_ l_ n + d f g_ j_ m_ n + d g_ j_ k_ m_ n + d_ f g_ l_ m_ n + d_ g_ k_ l_ m_ n 
+Return: 98
+------------
+Added gate: st_36
+Input list: 2 18 4 6 10 12 20 24 26 
+b_ j + c d f j + c f g_ j + c d j k_ + c g_ j k_ + d f j m_ + f g_ j m_ + d j k_ m_ + g_ j k_ m_ + c d f n + c f g_ n + c d k_ n + c g_ k_ n + d f m_ n + f g_ m_ n + d k_ m_ n + g_ k_ m_ n 
+Return: 100
+------------
+Added gate: st_37
+Input list: 2 4 6 10 12 20 24 
+b_ + c d f + c f g_ + c d k_ + c g_ k_ + d f m_ + f g_ m_ + d k_ m_ + g_ k_ m_ 
+Return: 102
+------------
+Added gate: st_38
+Input list: 6 10 12 20 
+d f + f g_ + d k_ + g_ k_ 
+Return: 104
+------------
+Added gate: st_39
+Input list: 10 20 
+f + k_ 
+Return: 106
+------------
+Optimized literal count: 364

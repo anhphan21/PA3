@@ -1,0 +1,188 @@
+.model top
+.inputs a b c d e f g h i j k l m n
+.outputs o p q r s t u v
+.names st_0 d a b g h o
+10---- 1
+--1111 1
+.names st_3 j a b n p
+11--- 1
+--111 1
+.names st_7 a b d g q
+11--- 1
+--101 1
+.names st_10 st_9 a b h j l r
+11----- 1
+--11100 1
+.names st_17 h a f j s
+10--- 1
+-1110 1
+.names st_23 a b c h l t
+11---- 1
+--1010 1
+.names st_28 a e j n u
+10--- 1
+--100 1
+.names st_33 h a e j v
+10--- 1
+-1110 1
+.names b g h i l st_0
+111-- 1
+11-0- 1
+1-1-0 1
+-01-0 1
+1--00 1
+-0-00 1
+0101- 1
+0-011 1
+-0011 1
+.names g h i l st_1
+11-- 1
+1-0- 1
+-1-0 1
+--00 1
+.names h i st_2
+1- 1
+-0 1
+.names l c d e f g a b k m n st_3
+1---------- 1
+-1111------ 1
+-1-111----- 1
+---1--111-- 1
+-111----1-- 1
+---11-1-1-- 1
+---10--11-- 1
+-1-1-1--1-- 1
+--111----1- 1
+---111---1- 1
+--11----11- 1
+---1-1--11- 1
+-11-1-----1 1
+-1--11----1 1
+-11-----1-1 1
+-1---1--1-1 1
+--1-1----11 1
+----11---11 1
+--1-----111 1
+---11-11-1- 1
+-1-11-1--1- 1
+-0-11--1-1- 1
+-1-1--1-11- 1
+-0-1---111- 1
+-1--1-1--11 1
+-0--1--1-11 1
+.names st_5 d a e f m st_4
+11---- 1
+--1111 1
+.names st_6 e st_5
+11 1
+.names f k st_6
+1- 1
+-1 1
+.names b g d k f m c n e st_7
+11------- 1
+-11------ 1
+1--1----- 1
+---11---- 1
+1----1--- 1
+-----11-- 1
+1------1- 1
+-------11 1
+.names g k m n st_8
+1--- 1
+-1-- 1
+--1- 1
+---1 1
+.names a h st_9
+00 1
+.names st_11 b c d e f i j st_10
+10------ 1
+--111111 1
+.names st_12 i d g j k m n st_11
+11------ 1
+-0100111 1
+.names st_13 j g k m n st_12
+11---- 1
+--1111 1
+.names st_14 c l st_13
+11- 1
+--1 1
+.names st_15 e d f n st_14
+11--- 1
+--111 1
+.names f g d k st_15
+11-- 1
+--11 1
+-1-1 1
+.names f k st_16
+1- 1
+-1 1
+.names st_18 a b c d f i k st_17
+10------ 1
+--000011 1
+.names st_19 f b i k st_18
+11--- 1
+--011 1
+.names st_20 i c j k m st_19
+11---- 1
+--1010 1
+.names st_21 j c d k st_20
+11--- 1
+--111 1
+.names st_22 c b st_21
+11- 1
+--0 1
+.names d g st_22
+1- 1
+-0 1
+.names st_24 c b g m st_23
+11--- 1
+--111 1
+.names st_25 m h j st_24
+11-- 1
+--10 1
+.names st_26 i h st_25
+10- 1
+--1 1
+.names st_27 j g st_26
+11- 1
+--1 1
+.names d l st_27
+1- 1
+-1 1
+.names st_29 i b d g j st_28
+11---- 1
+--0100 1
+.names st_30 c b st_29
+11- 1
+--0 1
+.names st_31 d st_30
+11 1
+.names e f k n st_31
+11-- 1
+1-0- 1
+-1-0 1
+--00 1
+.names f k st_32
+1- 1
+-0 1
+.names st_34 a b e f j k l st_33
+10------ 1
+--001001 1
+.names st_35 e b i n st_34
+11--- 1
+--011 1
+.names st_36 i f j k l st_35
+11---- 1
+--0100 1
+.names st_37 j c d f n st_36
+11---- 1
+--1111 1
+.names st_38 c b st_37
+11- 1
+--0 1
+.names st_39 d st_38
+11 1
+.names f k st_39
+1- 1
+-0 1
+.end
