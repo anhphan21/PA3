@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 class cube {
@@ -11,9 +12,9 @@ public:
 
     cube();
     cube(vector<int>);
-    const int size();
-    const auto begin();
-    const auto end();
+    int size() const;
+    auto begin() const;
+    auto end() const;
     auto erase(auto);
     void push_back(int);
 
@@ -25,7 +26,7 @@ public:
 
     const bool is_one();
 
-    int &operator[](int idx) {
+    int operator[](int idx) const {
         if ((idx < 0) || (idx >= list_var.size())) {
             cout << "index out of bound !!!" << endl;
             return list_var[0];
@@ -34,15 +35,15 @@ public:
             return list_var[idx];
     }
 
-    friend bool operator==(cube, cube);
-    friend bool operator<=(cube, cube);   //Check cube contains cube
-    friend bool operator<=(cube, int);    //Check var is in cube ?
+    friend bool operator==(const cube&, const cube&);
+    friend bool operator<=(const cube&, const cube&);   //Check cube contains cube
+    friend bool operator<=(const cube&, int);    //Check var is in cube ?
     friend cube operator-(const cube &, const int &);
     friend cube operator-(const cube &, const cube &);
     friend cube operator+(const cube &, const int &);
     friend cube operator+(const cube &, const cube &);
 };
 
-cube get_common_var(cube, cube);
-cube get_union_var_set(cube, cube);
+cube get_common_var(const cube&, const cube&);
+cube get_union_var_set(const cube&, const cube&);
 #endif

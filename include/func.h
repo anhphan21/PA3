@@ -74,12 +74,12 @@ public:
     friend div operator/(const vector<cube> &, const vector<cube> &);   //1st quotient, 2nd: remainder
     friend vector<cube> operator/(const vector<cube> &, const cube &);
 
-    void update_input(vector<int>,vector<int>); //Update No_input, input_list
     void set_cube_list(vector<cube>);   //Set cube_list
     void set_output_name(string);           //Set output_idx
 };
 
 func::div get_div(const vector<cube> &, const vector<cube> &);
+vector<cube> get_div_by_cube(const vector<cube> &, const cube &);
 
 bool func_is_one(vector<cube>);
 vector<cube> get_intersect_cube_set(vector<cube> , vector<cube>);

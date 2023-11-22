@@ -23,7 +23,6 @@ func::func(int no_input, string output_name, vector<cube> cube_list) {
     this->no_input = no_input;
     this->output_name = output_name;
     this->cube_list = cube_list;
-    // update_co_ker();
 }
 
 func::func(int no_input, vector<int> input_list, vector<cube> cube_list) {
@@ -55,8 +54,8 @@ void func::set_output_name(string output_name) {
 
 void func::set_cube_list(vector<cube> update) {
     cube_list = update;
-    
     vector<int> var;
+    
     for (int i = 0; i < update.size(); i++) {
         for (int j = 0; j < update[i].size(); j++) {
             int check;
@@ -102,24 +101,6 @@ const vector<cube> func::get_cube_list() {
     return cube_list;
 }
 
-void func::update_input(vector<int> elim, vector<int> add ) {
-    for (auto i = input_list.begin(); i != input_list.end();) {
-        for (auto j = elim.begin(); j != elim.end();) {
-            if (*i == *j) {
-                i = elim.erase(i);
-                j = input_list.erase(j);
-            }
-            else
-                j++;
-        }
-        if(elim.size() == 0)
-            break;
-    }
-    for (int i = 0; i < add.size(); i++)
-        input_list.push_back(add[i]);
-    no_input = no_input - elim.size() + add.size();
-}
-
 //Operator function
 bool operator==(const vector<cube> &f0, const vector<cube> &f1) {
     int s_f1 = f1.size();
@@ -142,9 +123,8 @@ bool operator==(const vector<cube> &f0, const vector<cube> &f1) {
 bool operator<=(const vector<cube> &f0, const vector<cube> &f1) {
     int s_f1 = f1.size();
     int s_f0 = f0.size();
-    if (s_f1 > s_f0) {
+    if (s_f1 > s_f0)
         return 0;
-    }
     else {
         int found = 0;
         for (int i = 0; i < s_f0; i++) {
@@ -434,5 +414,26 @@ vector<vector<cube>> get_union_func_set(vector<vector<cube>> s0, vector<vector<c
         if (j == temp.size())
              temp.push_back(s1[i]);
     }   
+    return temp;
+}
+
+vector<cube> get_div_by_cube(const vector<cube> &f0, const cube &c) {
+    vector<cube> temp;
+    for (int i = 0; i < f0.size(); i++) {
+        if (f0[i] <= c)
+            temp.push_back(f0[i]);
+    }
+    
+    for (int i = 0; i < temp.size(); i++) {
+        temp[i] = temp[i] - c;
+    }
+
+    for (int i = 0; i < temp.size(); i++) {      //Exist case that div and get 1 in result
+        if (temp[i].is_one()) {
+            temp.clear();               
+            cube one;
+            temp.push_back(one);
+        }
+    }
     return temp;
 }

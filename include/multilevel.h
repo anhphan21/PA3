@@ -50,12 +50,14 @@ public:
     int add_new_gate(vector<cube>);
     
     // Upper done
-    void single_extraction();
+    void single_extraction(func &, func &);
     void decompose(func &);
 
     void test_decompose();
-
+    void single_extraction_network();
+    void single_extraction_for_synth_list(int, int);
     int cal_literal();
+    void synthesis();
 };
 
 #endif

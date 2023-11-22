@@ -8,15 +8,15 @@ cube::cube(vector<int> list_var) {
     this->list_var = list_var;
 }
 
-const int cube::size() {
+int cube::size() const {
     return list_var.size();
 }
 
-const auto cube::begin() {
+auto cube::begin() const {
     return list_var.begin();
 }
 
-const auto cube::end() {
+auto cube::end() const {
     return list_var.end();
 }
 
@@ -32,7 +32,7 @@ const bool cube::is_one() {
     return !(list_var.size());
 }
 
-bool operator==(cube c0, cube c1) {
+bool operator==(const cube &c0,const cube &c1) {
     int s_c1 = c1.size();
     int s_c0 = c0.size();
     if (s_c1 != s_c0)
@@ -50,7 +50,7 @@ bool operator==(cube c0, cube c1) {
     }
 }
 
-bool operator<=(cube c0, cube c1) {
+bool operator<=(const cube &c0, const cube &c1) {
     int s_c1 = c1.size();
     int s_c0 = c0.size();
     if (s_c1 > s_c0)
@@ -68,7 +68,7 @@ bool operator<=(cube c0, cube c1) {
     }
 }
 
-bool operator<=(cube c,int v) {
+bool operator<=(const cube &c,int v) {
     int s_c = c.size();
     for (int i = 0; i < s_c; i++) {
         if (c[i] == v)
@@ -113,7 +113,7 @@ cube operator+(const cube &c0, const cube &c1) {
     return t0;
 }
 
-cube get_common_var(cube c0, cube c1) {
+cube get_common_var(const cube &c0, const cube &c1) {
     cube common;
     for (auto i = c0.begin(); i != c0.end();) {
         for (auto j = c1.begin(); j != c1.end();) {
@@ -129,7 +129,7 @@ cube get_common_var(cube c0, cube c1) {
     return common;
 }
 
-cube get_union_var_set(cube c0, cube c1) {
+cube get_union_var_set(const cube &c0, const cube &c1) {
     cube temp = c0;
     for (int i = 0; i < c1.size(); i++) {
         int j;

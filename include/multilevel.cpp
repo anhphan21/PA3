@@ -338,137 +338,140 @@ void multilevel::write_blif_file()  {
 	output_file << ".end";
 }
 
-// void multilevel::single_extraction() {
-// 	vector<cube> aux;
-// 	vector<int> var_temp = var_list;
-// 	vector<cube> check_0;
-// 	cube check_1;
+void multilevel::single_extraction(func &func0, func &func1) {
+	vector<cube> aux;
+	vector<int> var_temp = var_list;
+	vector<cube> check_0;
+	cube check_1;
 
-// 	if (debug) {
-// 		print_cube_set_with_name(func_list[0].cube_list);
-// 		print_cube_set_with_name(func_list[1].cube_list);
-// 	}
+	if (debug) {
+		cout << "Original function" << endl;
+		print_cube_set_with_name(func0.cube_list);
+		print_cube_set_with_name(func1.cube_list);
+		cout << "------" << endl;
+	}
 	
-// 	//add input to var_List_temp
-// 	for (int i = 0; i < output_list.size(); i++) {
-// 		var_temp.push_back(var_temp.size());
-// 		var_temp.push_back(var_temp.size()+1);
-// 	}
-	
-// 	for (int i = 0; i < func_list.size(); i++) {	//aux func
-// 		for (int j = 0; j < func_list[i].get_no_cube(); j++) {
-// 			aux.push_back(func_list[i][j] + (input_list.size()+i)*2);
-// 		}
-// 	}
+	//add input to var_List_temp
+	for (int i = 0; i < 2; i++) {
+		var_temp.push_back(input_list.size()*2+i);
+		var_temp.push_back(input_list.size()*2+i);
+	}
 
-// 	//Check aux function 
-// 	if (debug) {
-// 		for (int i = 0; i < aux.size(); i++) {
-// 			for (int j = 0; j < aux[i].size(); j++) {
-// 				cout << get_var_name(aux[i][j]);
-// 				if (j == (aux[i].size()-1))
-// 					cout << get_output_name((aux[i][j]/2)-input_list.size());
-// 			}
-// 			cout << " ";
-// 		}
-// 		cout << endl;
-// 	}
-
-// 	vector<vector<cube>> aux_kernel = get_kernel(aux, check_0, check_1);
-// 	vector<cube> aux_co_kernel = get_co_kernel(aux, aux_kernel);
-	
-// 	if (debug) {
-// 		cout << "Done getting kernel / co_kernel" << endl;
-// 		print_cube_set_with_name(aux_co_kernel);
-// 		cout << endl;
-// 		cout << var_temp.size() << " " << input_list.size() << endl;
-// 	}
+	//Create aux func
+	for (int i = 0; i < func0.get_no_cube(); i++) 
+		aux.push_back(func0[i] + (input_list.size()*2));
+	for (int i = 0; i < func1.get_no_cube(); i++)
+		aux.push_back(func1[i] + (input_list.size()*2+1));
 	
 
-// 	vector<cube> common_co_ker;
-// 	for (int i = 0; i < aux_co_kernel.size(); i++) {
-// 		int j = 0;
-// 		for (; j < aux_co_kernel[i].size(); j++) {
-// 			if (aux_co_kernel[i][j] >= (input_list.size()*2))
-// 				break;
-// 		}
-// 		if(j == aux_co_kernel[i].size())
-// 			common_co_ker.push_back(aux_co_kernel[i]);
-// 	}
+	//Check aux function 
+	if (debug) {
+		for (int i = 0; i < aux.size(); i++) {
+			for (int j = 0; j < aux[i].size(); j++) {
+				cout << aux[i][j] << " ";
+			}
+			cout << "_";
+		}
+		cout << endl;
+	}
 
-// 	int max = 0;
-// 	cube result;
-// 	for (int i = 0; i < common_co_ker.size(); i++) {
-// 		int cnt = 0;
-// 		for (int j = 0; j < func_list.size(); j++) {
-// 			for (int k = 0; k < func_list[j].get_no_cube(); k++) {
-// 				if (func_list[j][k]<=common_co_ker[i])
-// 					cnt++;
-// 			}
-// 		}
-// 		cout << "Size: " << common_co_ker[i].size() << endl;
-// 		cnt = cnt*common_co_ker[i].size();
-// 		if (cnt > max) {
-// 			max = cnt;
-// 			result = common_co_ker[i];
-// 		}
-// 	}
-
-// 	if (debug) {
-// 		cout << max << endl;
-// 		cout << "------" << endl;
-// 		print_cube(result);
-// 		cout << endl;
-// 		cout << "------" << endl;
-// 		print_cube_set_with_name(common_co_ker);
-// 		cout << "------" << endl;
-
-// 		cout << "Function: ";
-// 		print_cube_set_with_name(aux);
-// 		cout << endl;
-// 		cout << "Co / Kernel list: " << endl;
-
-// 		for (int j = 0; j < aux_kernel.size() ; j++) {
-// 			cout << j << ". ";
-// 			print_cube_set_with_name(aux_kernel[j]);
-// 			cout << aux_kernel[j].size();
-// 			cout << " // ";
-// 			print_cube_set_with_name({aux_co_kernel[j]});
-// 			cout << aux_co_kernel[j].size() << " " << endl;
-// 		}
-
-// 		print_cube(check_1);
-// 		cout << endl;
-// 		cout << "Done extracting single cube!!" << endl;
-// 	}
+	vector<vector<cube>> aux_kernel = get_kernel(aux, check_0, check_1);
+	vector<cube> aux_co_kernel = get_co_kernel(aux, aux_kernel);
 	
-// 	if (result.size() > 1) {
-// 		//Create new function variable
-// 		func common_func(result.size(), input_list.size()*2, {result});
-// 		for (int i = 0; i < result.size(); i++)
-// 			common_func.input_list.push_back(result[i]);
+	if (debug) {
+		cout << "Done getting kernel / co_kernel" << endl;
+		// print_cube_set_with_name(aux_co_kernel);
+		cout << endl;
+		cout << var_temp.size() << " " << input_list.size() << endl;
+	}
+	
+
+	vector<cube> common_co_ker;
+	for (int i = 0; i < aux_co_kernel.size(); i++) {
+		int j = 0;
+		for (; j < aux_co_kernel[i].size(); j++) {
+			if (aux_co_kernel[i][j] >= (input_list.size()*2))
+				break;
+		}
+		if(j == aux_co_kernel[i].size())
+			common_co_ker.push_back(aux_co_kernel[i]);
+	}
+
+	for (auto i = common_co_ker.begin(); i != common_co_ker.end();) {
+		if (i->size() == 1)
+			i = common_co_ker.erase(i);
+		else
+			i++;
+	}
+	
+
+	int max = 0;
+	cube result;
+	for (int i = 0; i < common_co_ker.size(); i++) {
+		int cnt = 0;
+
+		for (int j = 0; j < func0.get_no_cube(); j++) {
+			if (func0[j]<=common_co_ker[i])
+				cnt++;
+		}
+		for (int j = 0; j < func1.get_no_cube(); j++) {
+			if (func1[j]<=common_co_ker[i])
+				cnt++;
+		}
+	
+		cout << "Size: " << common_co_ker[i].size() << endl;
+		cnt = cnt*common_co_ker[i].size();
+		if (cnt > max) {
+			max = cnt;
+			result = common_co_ker[i];
+		}
+	}
+
+	if (debug) {
+		cout << max << endl;
+		cout << "------" << endl;
+		print_cube(result);
+		cout << endl;
+		cout << "------" << endl;
+		print_cube_set_with_name(common_co_ker);
+		cout << "------" << endl;
+
+		cout << "Function: ";
+		// print_cube_set_with_name(aux);
+		cout << endl;
+		cout << "Co / Kernel list: " << endl;
+		for (int j = 0; j < aux_kernel.size() ; j++) {
+			cout << j << ". ";
+			// print_cube_set_with_name(aux_kernel[j]);
+			cout << aux_kernel[j].size();
+			cout << " // ";
+			// print_cube_set_with_name({aux_co_kernel[j]});
+			cout << aux_co_kernel[j].size() << " " << endl;
+			cout << "Result size: " << result.size() << endl;
+		}
+		print_cube(check_1);
+		cout << endl;
+		cout << "Done extracting single cube!!" << endl;
+	}
+	
+	if (result.size() > 1) {
+		// //Create new function variable
+		int new_gate_idx = add_new_gate({result});
+		cube new_cube({new_gate_idx});
+		// //modify old gate
+		vector<cube> new_func0 = get_div_by_cube(func0.cube_list, result);
+		vector<cube> new_func1 = get_div_by_cube(func1.cube_list, result);
 		
-// 		//Add new function to blif_database
-// 		//Add output var
-// 		string func_name;
-// 		for (int i = 0; i < result.size(); i++) {
-// 			func_name=func_name+input_list[result[i/2]];
-// 		}
-// 		synth_var_list.push_back(func_name);
-// 		//
-// 		var_list.push_back(var_list.size());
-// 		var_list.push_back(var_list.size()+1);
-// 		//Add function to syn_func_list
-// 		synth_func_list.push_back(common_func);
+		for (int i = 0; i < new_func0.size(); i++)
+			new_func0[i] = new_func0[i]+new_cube;
 
-// 		for (int i = 0; i < func_list.size(); i++) {
-// 			func_list[i].no_input-=(result.size()+1);
-// 			// output_id
-// 		}
+		for (int i = 0; i < new_func1.size(); i++)
+			new_func1[i] = new_func1[i]+new_cube;
 		
-// 	}
-	
-// }
+		func0.set_cube_list(new_func0);
+		func1.set_cube_list(new_func1);
+	}
+}
 
 int multilevel::add_new_gate(vector<cube> Q) {		//Return var_list idx corresponding to output_var
 	func new_gate;
@@ -492,7 +495,6 @@ int multilevel::add_new_gate(vector<cube> Q) {		//Return var_list idx correspond
 	//Return the idx of the var_name in var_list
 	return (input_list.size()*2+(synth_var_list.size()-1)*2);
 }
-
 
 void multilevel::decompose(func &f) {
 	//Get kernel
@@ -559,4 +561,29 @@ int multilevel::cal_literal() {
 		}
 	}
 	return no_lit;
+}
+
+void multilevel::single_extraction_for_synth_list(int start, int end) {
+	if (start != end) {
+		for (int i = start; i < end/2; i++)
+			single_extraction(synth_func_list[i],synth_func_list[end-i-1]);
+		single_extraction_for_synth_list(end, synth_func_list.size());
+	}
+}
+
+void multilevel::single_extraction_network() {
+	int no_func = func_list.size();
+	for (int i = 0; i < no_func/2; i++) {
+		single_extraction(func_list[i],func_list[no_func-i-1]);
+	}
+	single_extraction_for_synth_list(0, synth_func_list.size());
+}
+
+void multilevel::synthesis() {
+	if (func_list[0].cube_list.size() == 1 ) {
+		single_extraction_network();
+	}
+	else {
+		test_decompose();
+	}
 }
