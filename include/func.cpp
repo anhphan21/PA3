@@ -72,9 +72,19 @@ void func::set_cube_list(vector<cube> update) {
                 var.push_back(check);
         }
     }
-    
+
     input_list = var;
     no_input = var.size();
+
+    cout << "~~~~~~~~~~~~~" << endl;
+    cout << "Size of cube list of function: " << cube_list.size() << endl;
+    cout << "Var list in function: ";
+    for (int i = 0; i < input_list.size(); i++)
+        cout << " " << input_list[i];
+    cout << "\nNo input in function: " << no_input << endl;
+    cout << "Update cube for function: " << output_name  << endl;
+    cout << "~~~~~~~~~~~~~" << endl;
+    
 }
 
 const int func::get_no_cube() {
@@ -436,4 +446,24 @@ vector<cube> get_div_by_cube(const vector<cube> &f0, const cube &c) {
         }
     }
     return temp;
+}
+
+void func::print_function() {
+    cout << "###############################" << endl;
+    cout << "Output name: " << output_name << endl;
+    cout << "No variable: " << no_input << endl;
+    cout << "Var in func:";
+    for (int i = 0; i < list_var.size(); i++)
+        cout << " " << list_var[i];
+    cout << endl;
+    cout << "List cube size: " << cube_list.size() << endl;
+    cout << "Function:";
+    for (int i = 0; i < cube_list.size(); i++) {
+        for (int j = 0; j < cube_list[i].size(); j++) {
+            cout << " " << cube_list[i][j];
+        }
+        cout << " +";
+    }
+    cout << endl;
+    cout << "###############################" << endl;
 }

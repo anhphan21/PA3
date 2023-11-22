@@ -76,6 +76,7 @@ public:
 
     void set_cube_list(vector<cube>);   //Set cube_list
     void set_output_name(string);           //Set output_idx
+    void print_function();
 };
 
 func::div get_div(const vector<cube> &, const vector<cube> &);

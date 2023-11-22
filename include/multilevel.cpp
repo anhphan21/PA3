@@ -3,6 +3,7 @@
 void multilevel::print_cube(cube c) {
 	for (int j = 0; j < c.size(); j++)
         cout << get_var_name(c[j]) << " ";
+		// cout << c[j] << " ";
 }
 
 void multilevel::print_cube_set_with_name(vector<cube> c0) {
@@ -264,6 +265,7 @@ void multilevel::write_blif_file()  {
 	
 	for (int i = 0; i < func_list.size(); i++) {
 		int func_input_size = 0;
+
 		for (int j = 0; j < func_list[i].get_no_input(); j++) {
 			if (!(func_list[i].get_input_idx(j)%2))
 				func_input_size++;
@@ -301,10 +303,17 @@ void multilevel::write_blif_file()  {
 	}
 
 	for (int i = 0; i < synth_func_list.size(); i++) {
+
 		int func_input_size = 0;
 		for (int j = 0; j < synth_func_list[i].get_no_input(); j++) {
 			if (!(synth_func_list[i].get_input_idx(j)%2))
 				func_input_size++;
+			// cout << synth_func_list[i].input_list[j] << endl;
+		}
+
+		if (debug) {
+			cout << "Printing function: " << synth_func_list[i].get_output_name() << endl;
+			cout << "No input in function: " << func_input_size << endl;
 		}
 
 		output_file << ".names";
@@ -419,7 +428,6 @@ void multilevel::single_extraction(func &func0, func &func1) {
 				cnt++;
 		}
 	
-		cout << "Size: " << common_co_ker[i].size() << endl;
 		cnt = cnt*common_co_ker[i].size();
 		if (cnt > max) {
 			max = cnt;
@@ -493,59 +501,130 @@ int multilevel::add_new_gate(vector<cube> Q) {		//Return var_list idx correspond
 	synth_func_list.push_back(new_gate);
 
 	//Return the idx of the var_name in var_list
+	if (debug)
+		cout << "Gate " << synth_func_list.back().output_name << " has been created by add_new_gate" << endl;
+	cout << "Gate: " << synth_func_list[synth_func_list.size()-2].output_name << "still there " << endl;
 	return (input_list.size()*2+(synth_var_list.size()-1)*2);
 }
 
 void multilevel::decompose(func &f) {
 	//Get kernel
-	vector<cube> no_var;
-	cube pre;
-	vector<vector<cube>> kernel_check = get_kernel(f.cube_list, no_var, pre);
+	if (f.get_no_cube() != 1) {
+		vector<cube> no_var;
+		cube pre;
+		vector<vector<cube>> kernel_check = get_kernel(f.cube_list, no_var, pre);
 
-	if (kernel_check.size() != 1) {
-		
-		int ker_id;
-		if (f.cube_list == kernel_check.back()){
-			int max = 0;
-			for (int i = 0; i < kernel_check.size()-1; i++) {
-				if (kernel_check[i].size() > max) {
-					ker_id = i;
-					max = kernel_check[i].size();
-				}
+		if (debug)  {
+			cout << "\n----------" << endl;
+			cout << "Decomposing function: " << endl;
+			print_cube_set_with_name(f.cube_list);
+			cout << "No kernel: " << kernel_check.size() << endl;
+			for (int i = 0; i < kernel_check.size(); i++)
+				print_cube_set_with_name(kernel_check[i]);
+			if (f.output_name == "st_1") {
+				cout << "Check this bitch!!" << endl;
+				cout << "Size of synthesis vector: " << synth_func_list.size() << endl;
 			}
 		}
+
+		if (kernel_check.size() != 1) {
+
+			if (debug) {
+				cout << "-------- Start Decomposing --------" << endl;
+			}
+
+			int ker_id;
+			if (f.cube_list == kernel_check.back()){
+				int max = 0;
+				for (int i = 0; i < kernel_check.size()-1; i++) {
+					if (kernel_check[i].size() > max) {
+						ker_id = i;
+						max = kernel_check[i].size();
+					}
+				}
+			}
+			else
+				ker_id = kernel_check.size()-1;
+
+			if (debug) {
+				cout << "Getting ker id: " << ker_id << endl;
+				cout << "Kernel coresponding to ker id: ";
+				print_cube_set_with_name(kernel_check[ker_id]);
+			}
+			
+			func::div mess= get_div(f.cube_list, kernel_check[ker_id]);
+
+			if (debug) {
+				cout << "Decomposition: " << endl;
+				cout << "-> Quotient: ";
+				print_cube_set_with_name(mess.Q);
+				cout << "-> Remainer: ";
+				print_cube_set_with_name(mess.R);
+				if (f.output_name == "st_1") {
+					cout << "Still watching u " << f.output_name << endl;
+				}
+			}
+			
+			cout << "Before create new func for decom: " << f.output_name << endl;
+
+			int co_idx;
+			if (mess.Q[0].size() > 1) {
+				if (debug)
+					cout << "Create gate for co_kernel" << endl;
+				co_idx = add_new_gate(mess.Q);
+			}
+			else
+				co_idx = mess.Q[0][0];
+			
+			func *temp2bug = &f;
+			cout << synth_func_list.size() << endl;
+			////////////////////////////////////////////
+			//Adding new function corresponding to kernel and co_kernel
+			int ker_idx = add_new_gate(kernel_check[ker_id]);		// <====== Problem here
+			f.print_function();
+			//////////////////////////////////////////////////
+			cout << synth_func_list.size() << endl;
+
+
+			cube decom({ker_idx,co_idx});
+
+			vector<cube> new_func_cube_list;
+			if (mess.R.size()==0)
+				new_func_cube_list = {decom};
+			else
+				new_func_cube_list = {decom, mess.R[0]};
+
+			if (debug) {
+				cout << "Ker / Co id: " << ker_idx << "___" << co_idx << endl;
+				cout << "Decompose part: ";
+				print_cube(decom);
+				cout << endl;
+				cout << "New function create!!!" << endl;
+				cout << "Function: " << synth_func_list.back().output_name << " = ";
+				print_cube_set_with_name(synth_func_list.back().cube_list);
+			}
+
+			//Modify old gate
+			temp2bug->set_cube_list(new_func_cube_list);
+
+			if (debug) {
+				cout << "Original function after decomposing!!!" << endl;
+				cout << "Function: " << f.output_name << " = ";
+				print_cube_set_with_name(f.cube_list);
+				cout << endl;
+			}
+
+			decompose(synth_func_list.back());
+		}
 		else
-			ker_id = kernel_check.size()-1;
-		
-		func::div mess= get_div(f.cube_list, kernel_check[ker_id]);
-		
-
-		int co_idx;
-		if (mess.Q[0].size() > 1)
-			co_idx = add_new_gate(mess.Q);
-		else
-			co_idx = mess.Q[0][0];
-
-		int ker_idx = add_new_gate(kernel_check[ker_id]);
-
-		cube decom({ker_idx,co_idx});
-
-		vector<cube> new_func_cube_list;
-		if (mess.R.size()==0)
-			new_func_cube_list = {decom};
-		else
-			new_func_cube_list = {decom, mess.R[0]};
-
-		//Modify old gate
-		f.set_cube_list(new_func_cube_list);
-		
-		decompose(synth_func_list.back());
+			if (debug)
+				cout << "Original function cannot decompose anymore" << endl;
 	}
 }
 
 void multilevel::test_decompose() {
-	for (int i = 0; i < func_list.size(); i++)
-		decompose(func_list[i]);
+	for (auto i = func_list.begin(); i != func_list.end(); i++)
+		decompose(*i);
 }
 
 int multilevel::cal_literal() {
@@ -580,10 +659,8 @@ void multilevel::single_extraction_network() {
 }
 
 void multilevel::synthesis() {
-	if (func_list[0].cube_list.size() == 1 ) {
+	if (func_list[0].cube_list.size() == 1 )
 		single_extraction_network();
-	}
-	else {
+	else
 		test_decompose();
-	}
 }
